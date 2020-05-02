@@ -30,9 +30,9 @@ function renderCategories(cats = []) {
           } 
       } = category;
 
-    const elmts = `<div data-id="${id}">
-        <p>${name}</p>
-    </div>`;
+    const elmts = `<span id="cat-item" data-id="${id}">
+        ${name}
+    </span>`;
     catList.innerHTML = catList.innerHTML + elmts;
 }
   }

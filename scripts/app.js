@@ -68,11 +68,11 @@ function renderSearch(searchs = []) {
         name
       }
     } = rest;
-    const elmts = `<div data-id="${id}">
+    const elmts = `<div id="left-items" data-id="${id}">
     <p>${name}</p>
 </div>`;
 asideSec.innerHTML = asideSec.innerHTML + elmts;
-    console.log(searchs);
+    // console.log(searchs);
   }
 }
 
@@ -81,12 +81,9 @@ function renderShowSelected(searchs = []) {
   const {restaurants} = searchs;
   for(let rest of restaurants){
     const
-    {restaurant:
-      {photos:
-        {photo:
-          {url}
-        }}}=rest;
-    console.log(url);
+    {restaurant:{photos}
+  } = rest;
+    console.log(photos);
 //     const elmts = `<div data-id="${id}">
 //      <img class=""show-image-one" srs="${url}"/>
 // </div>`;

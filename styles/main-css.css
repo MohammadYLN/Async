@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
 }
@@ -11,9 +12,13 @@ header {
   background-color: #f8f6f6;
   width: 100%;
   height: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 header .col-cat {
   margin-left: 15px;
+  flex: 1 1 20%;
 }
 header .col-cat h5 {
   font-family: "Roboto", sans-serif;
@@ -21,11 +26,25 @@ header .col-cat h5 {
   margin: 0px;
 }
 header .col-cat .cat-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   padding-top: 8px;
+}
+header .col-cat .cat-list div {
+  flex: 1 1 30%;
 }
 header .col-cat .cat-list label {
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
+}
+header #col-cuisine {
+  flex: 1 1 20%;
+  background-color: #a57171;
+}
+header #others {
+  flex: 2 1 40%;
+  background-color: #b35454;
 }
 
 .main-row {
@@ -35,15 +54,28 @@ header .col-cat .cat-list label {
   width: 100%;
   height: 700px;
 }
-.main-row .result {
+.main-row #result {
   flex: 1 1 25%;
-  background-color: #e7e5e5;
+  overflow: scroll;
+  background-color: #b1b0b0;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
 }
-.main-row .show-info {
+.main-row #result #left-items {
+  flex: 1 1 100%;
+  background-color: #dfdfdf;
+  margin-top: 1px;
+}
+.main-row #result #left-items p {
+  margin-left: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.main-row #show-info {
   flex: 3 1 75%;
   background-color: #f1efef;
 }
-.main-row .show-info .show-image-one {
+.main-row #show-info .show-image-one {
   width: 100px;
   height: 100px;
 }

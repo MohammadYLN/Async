@@ -4,6 +4,9 @@ const showSection = document.getElementById("show-info");
 
 let resId = [];
 let count = 0;
+let secrestaurants;
+let photoUrl;
+let photoId;
 
 async function getCategories() {
   let categories;
@@ -39,7 +42,7 @@ async function fetchSearch() {
 }
 
 async function fetchShowSelected() {
-  let secrestaurants;
+  
   fetch("https://developers.zomato.com/api/v2.1/restaurant?res_id=19360573", {
     headers: { "user-key": "6c11b6f8975b808590064388ed3f37a8"},"res_id":resId
      
@@ -50,23 +53,25 @@ async function fetchShowSelected() {
 }
 
 function renderShowSelected(searchs = []) {
-  // console.log("new is "+searchs);
-  const { restaurant } = searchs;
-  for (let restt of restaurant) {
-    const {
-      restaurant: {
-        photos,
-        R
-      }
-    } = restt;
-    // console.log(R);
-    //     const elmts = `<div data-id="${id}">
-    //      <img class=""show-image-one" srs="${url}"/>
-    // </div>`;
-    // showSection.innerHTML = showSection.innerHTML + elmts;
-    // console.log(featured_image);
+  const restaurant = searchs;
+  const{photos} = restaurant;
+
+  console.log(photos);
+  for(let photo of photos){
+    const{photo:{url,id}}=photo;
+    photoUrl = url;
+    photoId = id;
   }
-}
+  console.log(photoUrl)
+
+    
+        const elmts = `<div data-id="${photoId}">
+         <img id="show-image-one" show-image-one" src="${photoUrl}"/>
+    </div>`;
+    showSection.innerHTML = showSection.innerHTML + elmts;
+    
+  }
+
 
 
 
@@ -94,3 +99,14 @@ async function renderSearch(searchs = []) {
 window.addEventListener("load", getCategories);
 window.addEventListener("load", fetchSearch);
 window.addEventListener("load", fetchShowSelected);
+
+
+
+
+
+
+
+
+
+
+

@@ -16,47 +16,62 @@ header {
   flex-wrap: wrap;
 
   .col-cat {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-left: 32px;
-    flex: 1 1 20%;
-    
-    h5 {
+    margin-left: 27px;
+    flex: 1 1 18%;
+    h6 {
       font-family: "Roboto", sans-serif;
-      padding-top: 8px;
-      margin: 0px;
+      padding-top: 4px;
+      margin: 2px 4px;
+      font-size: 0.8em;
+      font-weight: bold;
     }
     #cat-list {
+      margin-top: 2px;
+      margin-left: 3px;
       display: flex;
-      flex: 1 1 30%;
       flex-direction: column;
       flex-wrap: wrap;
-      margin-top: 15px;
+      padding-top: 2px;
 
       div {
-        // flex: 1 1 30%;
-        display: inline;
-        p{
+        flex: 1 1 30%;
+
+        p {
           font-family: "Roboto", sans-serif;
-          margin: 2px;
-          // display: inline;
+          font-size: 0.7em;
+          cursor: pointer;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding: 0px;
         }
-      }
-      label {
-        font-family: "Roboto", sans-serif;
-        font-size: 0.9em;
       }
     }
   }
 
-  #col-cuisine{
+  #col-cuisine {
     flex: 1 1 20%;
-    background-color: #b3aaaa;
+    h6 {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.8em;
+      font-weight: bold;
+      padding-top: 4px;
+      margin: 2px 4px;
+    }
+
+    #cuisine-list {
+      margin-top: 10px;
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.8em;
+        cursor: pointer;
+        margin: 4px 4px;
+        padding: 0px;
+      }
+    }
   }
-  #others{
+  #others {
     flex: 2 1 40%;
-    background-color: #bb9090;
+    background-color: #d4d3d3;
   }
 }
 
@@ -83,6 +98,7 @@ header {
 
       p {
         margin-left: 30px;
+        font-size: 0.9em;
         font-family: "Roboto", sans-serif;
       }
     }
@@ -90,11 +106,23 @@ header {
   #show-info {
     flex: 3 1 75%;
     background-color: #f1efef;
+    #show-row {
+      display: flex;
+      flex-direction: row;
 
-    #show-image-one {
-      margin: 50px 200px;
-      width: 500px;
-      height: 500px;
+      #img-show {
+        flex: 1 1 40%;
+        cursor: pointer;
+        max-width: 200px;
+        height: 200px;
+      }
+
+      #desc-col{
+        flex: 1 1 40%;
+        height: 400px;
+        background-color: #8a91a3;
+        
+      }
     }
   }
 }

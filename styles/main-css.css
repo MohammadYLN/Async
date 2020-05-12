@@ -17,42 +17,58 @@ header {
   flex-wrap: wrap;
 }
 header .col-cat {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin-left: 32px;
-  flex: 1 1 20%;
+  margin-left: 27px;
+  flex: 1 1 18%;
 }
-header .col-cat h5 {
+header .col-cat h6 {
   font-family: "Roboto", sans-serif;
-  padding-top: 8px;
-  margin: 0px;
+  padding-top: 4px;
+  margin: 2px 4px;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 header .col-cat #cat-list {
+  margin-top: 2px;
+  margin-left: 3px;
   display: flex;
-  flex: 1 1 30%;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 15px;
+  padding-top: 2px;
 }
 header .col-cat #cat-list div {
-  display: inline;
+  flex: 1 1 30%;
 }
 header .col-cat #cat-list div p {
   font-family: "Roboto", sans-serif;
-  margin: 2px;
-}
-header .col-cat #cat-list label {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.7em;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 header #col-cuisine {
   flex: 1 1 20%;
-  background-color: #b3aaaa;
+}
+header #col-cuisine h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 4px;
+  margin: 2px 4px;
+}
+header #col-cuisine #cuisine-list {
+  margin-top: 10px;
+}
+header #col-cuisine #cuisine-list p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin: 4px 4px;
+  padding: 0px;
 }
 header #others {
   flex: 2 1 40%;
-  background-color: #bb9090;
+  background-color: #d4d3d3;
 }
 
 .main-row {
@@ -77,16 +93,27 @@ header #others {
 }
 .main-row #result #left-items p {
   margin-left: 30px;
+  font-size: 0.9em;
   font-family: "Roboto", sans-serif;
 }
 .main-row #show-info {
   flex: 3 1 75%;
   background-color: #f1efef;
 }
-.main-row #show-info #show-image-one {
-  margin: 50px 200px;
-  width: 500px;
-  height: 500px;
+.main-row #show-info #show-row {
+  display: flex;
+  flex-direction: row;
+}
+.main-row #show-info #show-row #img-show {
+  flex: 1 1 40%;
+  cursor: pointer;
+  max-width: 200px;
+  height: 200px;
+}
+.main-row #show-info #show-row #desc-col {
+  flex: 1 1 40%;
+  height: 400px;
+  background-color: #8a91a3;
 }
 
 /*# sourceMappingURL=main-css.css.map */

@@ -8,6 +8,22 @@ body {
   padding: 0px;
 }
 
+.main-row .show-row .desc-col #desc-openingtitle, .main-row .show-row .desc-col #desc-phonetitle, .main-row .show-row .desc-col #desc-cuisinetitle {
+  margin-top: 18px;
+  margin-bottom: 0px;
+  font-size: 0.9em;
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 2px;
+}
+
+.main-row .show-row .desc-col #desc-openingdesc, .main-row .show-row .desc-col #desc-phonedesc, .main-row .show-row .desc-col #desc-cuisinedesc {
+  padding-top: 2px;
+  color: #616161;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
 header {
   background-color: #f8f6f6;
   width: 100%;
@@ -18,27 +34,27 @@ header {
 }
 header .col-cat {
   margin-left: 27px;
-  flex: 1 1 18%;
+  flex: 1 1 21%;
 }
 header .col-cat h6 {
   font-family: "Roboto", sans-serif;
   padding-top: 4px;
-  margin: 2px 4px;
-  font-size: 0.8em;
-  font-weight: bold;
+  margin: 2px 2px;
+  font-size: 0.75em;
 }
 header .col-cat #cat-list {
   margin-top: 2px;
   margin-left: 3px;
+  height: 170px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-top: 2px;
 }
 header .col-cat #cat-list div {
-  flex: 1 1 30%;
+  flex: 1 1 50%;
 }
-header .col-cat #cat-list div p {
+header .col-cat #cat-list div label {
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
   cursor: pointer;
@@ -47,28 +63,28 @@ header .col-cat #cat-list div p {
   padding: 0px;
 }
 header #col-cuisine {
-  flex: 1 1 20%;
+  flex: 1 1 21%;
 }
 header #col-cuisine h6 {
   font-family: "Roboto", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: bold;
   padding-top: 4px;
-  margin: 2px 4px;
+  margin: 2px 20px;
 }
 header #col-cuisine #cuisine-list {
-  margin-top: 10px;
+  margin: 2px 20px;
 }
 header #col-cuisine #cuisine-list p {
   font-family: "Roboto", sans-serif;
   font-size: 0.8em;
   cursor: pointer;
-  margin: 4px 4px;
+  margin-left: 5px;
   padding: 0px;
 }
 header #others {
   flex: 2 1 40%;
-  background-color: #d4d3d3;
+  background-color: #eeecec;
 }
 
 .main-row {
@@ -95,25 +111,53 @@ header #others {
   margin-left: 30px;
   font-size: 0.9em;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
-.main-row #show-info {
+.main-row .show-row {
   flex: 3 1 75%;
-  background-color: #f1efef;
-}
-.main-row #show-info #show-row {
   display: flex;
+  margin-top: 20px;
   flex-direction: row;
 }
-.main-row #show-info #show-row #img-show {
-  flex: 1 1 40%;
+.main-row .show-row .img-div {
+  margin: 10px 10px;
+  flex: 1.5 1 30%;
   cursor: pointer;
-  max-width: 200px;
-  height: 200px;
 }
-.main-row #show-info #show-row #desc-col {
-  flex: 1 1 40%;
+.main-row .show-row .img-div #img-show {
+  width: 100%;
+  height: 420px;
+}
+.main-row .show-row .desc-col {
+  margin-left: 20px;
+  margin-top: 20px;
+  flex: 1 1 25%;
   height: 400px;
-  background-color: #8a91a3;
+}
+.main-row .show-row .desc-col #desc-title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+.main-row .show-row .desc-col #desc-address {
+  margin: 0px;
+  font-size: 0.8em;
+  color: #525252;
+  font-family: "Open Sans", sans-serif;
+}
+.main-row .show-row .desc-col #desc-booking {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: 0.9em;
+  color: #464646;
+  font-family: "Open Sans", sans-serif;
+}
+.main-row .show-row .desc-col #desc-delivery {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.9em;
+  color: #464646;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=main-css.css.map */
